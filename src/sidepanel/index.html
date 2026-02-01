@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assistant Workspace</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Booting WebContainer...</p>
+    <div id="status">Initializing...</div>
+  </div>
+  
+  <div id="error" style="display: none;">
+    <h2>Error</h2>
+    <pre id="error-message"></pre>
+    <button onclick="location.reload()">Reload</button>
+  </div>
+
+  <iframe 
+    id="workspace" 
+    style="display: none;"
+    title="Development Workspace"
+  ></iframe>
+
+  <script type="module" src="./host.ts"></script>
+</body>
+</html>
